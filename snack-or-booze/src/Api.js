@@ -16,6 +16,11 @@ class SnackOrBoozeApi {
     return result.data;
   }
 
+  static async getItemsByCategory(cat) {
+    const result = await axios.get(`${BASE_API_URL}/${cat}`);
+    return result.data;
+  }
+
 }
 
 export default SnackOrBoozeApi;
