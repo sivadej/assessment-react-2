@@ -27,6 +27,30 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "id": "pepsi",
+      "name": "Pepsi",
+      "description": "An ice-cold, refreshing Pepsi.",
+      "recipe": "Open can.",
+      "serve": "Serve can."
+    },
+    {
+      "id": "_jQQzo5"
+    },
+    {
+      "id": "sdfkj",
+      "name": "fdjklsf",
+      "description": "fdjklsf",
+      "recipe": "jklfd",
+      "serve": "fdjkl"
+    },
+    {
+      "id": "abc",
+      "name": "fdjksl",
+      "description": "fdjkl",
+      "recipe": "fdkjl",
+      "serve": "fdjkl"
     }
   ],
   "snacks": [
@@ -50,6 +74,26 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
+    },
+    {
+      "id": "chips",
+      "name": "Potato Chips",
+      "recipe": "Open bag.",
+      "serve": "Serve bag."
+    },
+    {
+      "id": "tacos",
+      "name": "3 Tacos",
+      "description": "meat beans YUM",
+      "recipe": "tortillas and shit",
+      "serve": "ppssssshhhhh"
+    },
+    {
+      "id": "pork",
+      "name": "pig",
+      "description": "from the wet market",
+      "recipe": "sjlflksfdjkl",
+      "serve": "fdkjlfj"
     }
   ]
 }

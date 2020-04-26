@@ -29,6 +29,7 @@ function FoodMenu({ items, title }) {
             ))}
           </ListGroup>
         </CardBody>
+        <Link to={`/${title.toLowerCase()}/add`}>Add new item</Link>
       </Card>
     </section>
   );
