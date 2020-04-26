@@ -10,15 +10,15 @@ import Snack from "./FoodItem";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [snacks, setSnacks] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    async function getSnacks() {
-      let snacks = await SnackOrBoozeApi.getSnacks();
-      setSnacks(snacks);
+    async function getItems() {
+      let items = await SnackOrBoozeApi.getItems();
+      setItems(items);
       setIsLoading(false);
     }
-    getSnacks();
+    getItems();
   }, []);
 
   if (isLoading) {
@@ -32,13 +32,13 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/">
-              <Home snacks={snacks} />
+              <Home items={items} />
             </Route>
             <Route exact path="/snacks">
-              <Menu snacks={snacks} title="Snacks" />
+              <Menu items={items} title="Snacks" />
             </Route>
             <Route path="/snacks/:id">
-              <Snack items={snacks} cantFind="/snacks" />
+              <Snack items={items} cantFind="/snacks" />
             </Route>
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>
