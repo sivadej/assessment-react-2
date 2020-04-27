@@ -53,7 +53,7 @@ const NewMenuItem = ({ category, title }) => {
           type='text'
           value={item.recipe}
           onChange={(e) => setItem({ ...item, recipe: e.target.value })}
-          placeholder='Recipe ID'
+          placeholder='Recipe'
         />
         <input
           type='text'

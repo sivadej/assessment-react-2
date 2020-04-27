@@ -36,7 +36,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/">
-              <Home items={{snacks:snacks, drinks:drinks}}/>
+              <Home itemCounts={{snacks:snacks.length, drinks:drinks.length}}/>
             </Route>
             <Route exact path="/snacks">
               <Menu items={snacks} title="Snacks" />
