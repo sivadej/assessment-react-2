@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import SnackOrBoozeApi from "./Api";
 import NavBar from "./NavBar";
-import { Route, Switch } from "react-router-dom";
 import Menu from "./FoodMenu";
 import Snack from "./FoodItem";
 import NewMenuItem from './NewMenuItem';
@@ -14,15 +13,24 @@ function App() {
   const [snacks, setSnacks] = useState([]);
   const [drinks, setDrinks] = useState([]);
 
-  useEffect(() => {
-    async function getItems() {
-      let drinks = await SnackOrBoozeApi.getItemsByCategory('drinks');
-      let snacks = await SnackOrBoozeApi.getItemsByCategory('snacks');
+  // Loads items into state using API calls
+  async function loadItems() {
+    try {
+      let drinksPromise = await SnackOrBoozeApi.getItemsByCategory('drinks');
+      let snacksPromise = await SnackOrBoozeApi.getItemsByCategory('snacks');
+      let [drinks, snacks] = await Promise.all([drinksPromise, snacksPromise]);
       setDrinks(drinks);
       setSnacks(snacks);
       setIsLoading(false);
     }
-    getItems();
+    catch (e) {
+      console.log(e);
+      return <Redirect to="/error" />
+    }
+  }
+
+  useEffect(() => {
+    loadItems();
   }, []);
 
   if (isLoading) {
@@ -42,23 +50,24 @@ function App() {
               <Menu items={snacks} title="Snacks" />
             </Route>
             <Route exact path="/snacks/add">
-              <NewMenuItem category="snacks" title="Snack" />
+              <NewMenuItem category="snacks" title="Snack" reload={loadItems} />
             </Route>
-            <Route path="/snacks/:id">
+            <Route exact path="/snacks/:id">
               <Snack items={snacks} cantFind="/snacks" />
             </Route>
             <Route exact path="/drinks/add">
-              <NewMenuItem category="drinks" title="Drink" />
+              <NewMenuItem category="drinks" title="Drink" reload={loadItems} />
             </Route>
             <Route exact path="/drinks">
               <Menu items={drinks} title="Drinks" />
             </Route>
-            <Route path="/drinks/:id">
+            <Route exact path="/drinks/:id">
               <Snack items={drinks} cantFind="/drinks" />
             </Route>
             <Route>
-              <p>Hmmm. I can't seem to find what you want.</p>
+              <p>There was a problem loading this page.</p>
             </Route>
+            <Redirect to="/"/>
           </Switch>
         </main>
       </BrowserRouter>

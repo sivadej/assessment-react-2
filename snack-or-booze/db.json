@@ -36,21 +36,18 @@
       "serve": "Serve can."
     },
     {
-      "id": "_jQQzo5"
+      "id": "coffee",
+      "name": "Coffee",
+      "description": "Hot coffee",
+      "recipe": "Hot water, folgers powder and milk",
+      "serve": "Pour into a cup and don't burn yourself."
     },
     {
-      "id": "sdfkj",
-      "name": "fdjklsf",
-      "description": "fdjklsf",
-      "recipe": "jklfd",
-      "serve": "fdjkl"
-    },
-    {
-      "id": "abc",
-      "name": "fdjksl",
-      "description": "fdjkl",
-      "recipe": "fdkjl",
-      "serve": "fdjkl"
+      "id": "pimp-juice",
+      "name": "Pimp Juice",
+      "description": "my pimp juice",
+      "recipe": "your pimp juice",
+      "serve": "uhhh"
     }
   ],
   "snacks": [
@@ -89,11 +86,25 @@
       "serve": "ppssssshhhhh"
     },
     {
-      "id": "pork",
-      "name": "pig",
-      "description": "from the wet market",
-      "recipe": "sjlflksfdjkl",
-      "serve": "fdkjlfj"
+      "id": "cheese",
+      "name": "Slice of Cheese",
+      "description": "All american",
+      "recipe": "slice the cheese",
+      "serve": "serve the cheese"
+    },
+    {
+      "id": "valid",
+      "name": "saf",
+      "description": "sdf",
+      "recipe": "fds",
+      "serve": "fds"
+    },
+    {
+      "id": "sdfkjldjs",
+      "name": "sjfkdl",
+      "description": "",
+      "recipe": "",
+      "serve": ""
     }
   ]
 }

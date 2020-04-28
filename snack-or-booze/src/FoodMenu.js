@@ -28,8 +28,8 @@ function FoodMenu({ items, title }) {
               </Link>
             ))}
           </ListGroup>
+          <CardText><br/><Link to={`/${title.toLowerCase()}/add`}>Add new item</Link></CardText>
         </CardBody>
-        <Link to={`/${title.toLowerCase()}/add`}>Add new item</Link>
       </Card>
     </section>
   );
