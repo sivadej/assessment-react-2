@@ -10,7 +10,7 @@ function Home({itemCounts}) {
             <h3 className="font-weight-bold">
               Welcome to Silicon Valley's premier dive cafe!
             </h3>
-            <h4>Browse our incredibly vast selection of {itemCounts.drinks} drinks and {itemCounts.snacks} snacks.</h4>
+            <h4 data-testid="item-count">Browse our incredibly vast selection of {itemCounts.drinks} drinks and {itemCounts.snacks} snacks.</h4>
           </CardTitle>
         </CardBody>
       </Card>

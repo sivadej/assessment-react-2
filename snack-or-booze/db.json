@@ -41,13 +41,6 @@
       "description": "Hot coffee",
       "recipe": "Hot water, folgers powder and milk",
       "serve": "Pour into a cup and don't burn yourself."
-    },
-    {
-      "id": "lljkljkl",
-      "name": "jkljkljkl",
-      "description": "jkljkl",
-      "recipe": "jkljkl",
-      "serve": "jkljl"
     }
   ],
   "snacks": [
@@ -91,20 +84,6 @@
       "description": "All american",
       "recipe": "slice the cheese",
       "serve": "serve the cheese"
-    },
-    {
-      "id": "fdsa",
-      "name": "fdsa",
-      "description": "fdsa",
-      "recipe": "fdsa",
-      "serve": "fdsa"
-    },
-    {
-      "id": "fdsaa",
-      "name": "fdsa",
-      "description": "fdsa",
-      "recipe": "fdsa",
-      "serve": "fdsa"
     }
   ]
 }
