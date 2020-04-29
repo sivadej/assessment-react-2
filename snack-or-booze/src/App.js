@@ -50,13 +50,13 @@ function App() {
               <Menu items={snacks} title="Snacks" />
             </Route>
             <Route exact path="/snacks/add">
-              <NewMenuItem category="snacks" title="Snack" reload={loadItems} />
+              <NewMenuItem category="snacks" title="Snack" reloadItems={loadItems} />
             </Route>
             <Route exact path="/snacks/:id">
               <Snack items={snacks} cantFind="/snacks" />
             </Route>
             <Route exact path="/drinks/add">
-              <NewMenuItem category="drinks" title="Drink" reload={loadItems} />
+              <NewMenuItem category="drinks" title="Drink" reloadItems={loadItems} />
             </Route>
             <Route exact path="/drinks">
               <Menu items={drinks} title="Drinks" />
