@@ -24,7 +24,7 @@ const NewMenuItem = ({ category, title, reloadItems }) => {
     setItem(i =>({ ...i, [name]: value }));
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     if (validator.allValid()) addItem(item);
     else validator.showMessages();

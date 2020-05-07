@@ -19,9 +19,7 @@ exports[`matches snapshot 1`] = `
         >
           Welcome to Silicon Valley's premier dive cafe!
         </h3>
-        <h4
-          data-testid="item-count"
-        >
+        <h4>
           Browse our incredibly vast selection of 2 drinks and 1 snacks.
         </h4>
       </div>
